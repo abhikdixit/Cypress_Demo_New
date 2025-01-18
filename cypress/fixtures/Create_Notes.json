@@ -1,0 +1,20 @@
+{
+    "notes": 
+    [
+        {
+            "title": "Home_work",
+            "description": "Done via Cypress",
+            "category": "Home"
+        },
+        {
+            "title": "Work_Notes",
+            "description": "Done via Cypress",
+            "category": "Work"
+        },
+        {
+            "title": "Personal_Notes",
+            "description": "Done via Cypress",
+            "category": "Personal"
+        }
+    ]
+}

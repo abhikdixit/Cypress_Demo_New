@@ -1,0 +1,12 @@
+[
+  {
+    "name": "JSESSIONID",
+    "value": "4D8835DD",
+    "path": "/",
+    "secure": false,
+    "hostOnly": true,
+    "httpOnly": true,
+    "domain": "zero.webappsecurity.com",
+    "sameSite": "lax"
+  }
+]

@@ -1,0 +1,80 @@
+Mocha Report
+npx cypress run mocha --spec "cypress/e2e\UI_Test\OrangeHRM_Login.cy.js" --reporter mochawesome
+
+-----------------------------
+To Install mochawesome
+npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+--------------------------------
+Execute Multiple Spec file.
+node_modules/.bin/cypress run --spec "cypress/integration/examples/Cypress_UI_Demo/OrangeHRM_Login.js,cypress\integration\examples\Cypress_UI_Demo\Fixture_OrangeHRMLogin_AllScenario_Verification.js"
+
+------------------------
+Run Script to Dashboard using key
+node_modules/.bin/cypress run --spec "cypress/integration/examples/Cypress_UI_Demo/OrangeHRM_Login.js,cypress\integration\examples\Cypress_UI_Demo\OrangeHRM_Login_Admin_Leave_Logout.js" --record --key 7f8de4aa-cffc-4205-a42a-0686e4882cc2
+-----------------
+To Install Typescript
+npm i typescript
+---------------
+Run script using tags
+npx cypress-tags run -e TAGS='@sanity'
+------------------------
+Run Direct Script to Dashboard
+npx cypress run Cypress_API_Demo_Dashboard
+--------------------------------------------
+Run Specific spec file in specfic browser with Head
+npx cypress run --spec "cypress/integration/examples/Cypress_UI_Demo/OrangeHRM_Login.js,cypress\integration\examples\Cypress_UI_Demo\Fixture_OrangeHRMLogin_AllScenario_Verification.js" --browser chrome --headed 
+------------------------------------------------
+Run Specific configuration file
+npx cypress run --config-file GUI_cypress.config.js
+--------------------------------------------
+Run Specific spec file in specfic browser in Headless mode
+npx cypress run --spec "cypress/integration/examples/Cypress_UI_Demo/OrangeHRM_Login.js,cypress\integration\examples\Cypress_UI_Demo\Fixture_OrangeHRMLogin_AllScenario_Verification.js" --browser chrome
+--------------------------------------------
+Run Specific spec file in in headless mode on default browser( Electron of Cypress)
+npx cypress run --spec "cypress/integration/examples/Cypress_UI_Demo/OrangeHRM_Login.js,cypress\integration\examples\Cypress_UI_Demo\Fixture_OrangeHRMLogin_AllScenario_Verification.js" --headed 
+------------------------------------------------------------------
+Add this line in Cypress.config.json file 
+
+"specPattern : 'cypress/e2e/UI_Test/',"
+
+npx cypress run --spec "**\WebOrder_Login.cy.js" --browser chrome --headed
+
+-------------------Run in Dashboard-----------
+
+npx cypress run --record --key 7f8de4aa-cffc-4205-a42a-0686e4882cc2
+
+-------------allure report----------------
+
+https://kailash-pathak.medium.com/how-to-integrate-allure-report-in-cypress-2224f4ae815
+-----------------------------------------------------------------------------------------
+1 .Install below commandline
+npm install -g allure-commandline --save-dev
+npm install -D allure-commandline --save-dev
+npm install -D mocha-allure-reporter --save-dev
+
+2. Execute below spec file
+npx cypress run --env allure=true,allureResultsPath=cypress\Allure/results --headed --spec "cypress/e2e\API_Test\Spreecom_API_Example\Auth_Token_Passing_to_Create_AddressDetails_Verify_Address_Using_UI.cy.js"
+
+2.1 Run all scripts under given folder or subfolder
+
+npx cypress run --env allure=true --reporter mocha-allure-reporter
+-------------------------------------------------------------------
+3. Generate Allure Report
+npx allure generate
+4.  To Generate clean report
+npx allure generate --clean
+5. To run entire scripts 
+npx cypress run --env allure=true
+6. To Generate and open report all together
+npm run allure generate allure-results --clean -o allure-report && allure open allure-report
+
+
+
+------------------Lambada Test------------------
+1. Install below command
+    npm install -g lambdatest-cypress-cli
+
+2. Use init command to generate the sample configuration files.
+    lambdatest-cypress init
+3. Pass the below command to run the test.
+    lambdatest-cypress run
