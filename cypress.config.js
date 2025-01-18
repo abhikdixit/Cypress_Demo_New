@@ -28,8 +28,8 @@ module.exports = defineConfig({
   e2e: {
     //specPattern: 'cypress/e2e/UI_Test/',
     //specPattern: 'cypress/e2e/ZeroBank_Test_PageObject/',
-    //specPattern: 'cypress/e2e/API_Test/Notes_API/',
-    specPattern: 'cypress/e2e/API_Test/API_Example/',
+    specPattern: 'cypress/e2e/API_Test/Notes_API/',
+    //specPattern: 'cypress/e2e/API_Test/API_Example/',
     setupNodeEvents(on, config) {
       //grep(config);
       //return config;
